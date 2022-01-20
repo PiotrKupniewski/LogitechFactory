@@ -1,3 +1,5 @@
 package device;
 
-public interface Device {}
+public interface Device {
+  void switchColor(String color);
+}

@@ -14,4 +14,3 @@ public class Simulation {
     requestDesktopManager.switchLedColor(deviceId, color);
   }
 }
-
