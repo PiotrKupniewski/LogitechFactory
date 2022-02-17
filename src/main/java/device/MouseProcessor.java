@@ -1,8 +1,10 @@
-import device.model.Mouse;
+package device;
+
+import communicator.model.Mouse;
 
 import java.util.Map;
 
-public class MouseProcessor implements ActionProcessor {
+public class MouseProcessor implements DeviceProcessor {
 
   Map<Integer, Mouse> mouses = Map.of(1, new Mouse(1L, 2));
 

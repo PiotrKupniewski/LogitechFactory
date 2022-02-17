@@ -1,7 +1,6 @@
-package device;
+package communicator;
 
-import device.DeviceCommunicator;
-import device.model.Mouse;
+import communicator.model.Mouse;
 
 public class MouseCommunicator implements DeviceCommunicator {
   @Override

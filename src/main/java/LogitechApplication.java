@@ -1,13 +1,15 @@
-import device.DeviceCommunicator;
+import communicator.DeviceCommunicator;
+import device.DeviceProcessor;
+import presenter.ApplicationPresenter;
 
-public class ApplicationManager {
+public class LogitechApplication {
 
   ApplicationPresenter presenter;
-  ActionProcessor processor;
+  DeviceProcessor processor;
   DeviceCommunicator communicator;
 
-  public ApplicationManager(
-      ApplicationPresenter presenter, ActionProcessor processor, DeviceCommunicator communicator) {
+  public LogitechApplication(
+      ApplicationPresenter presenter, DeviceProcessor processor, DeviceCommunicator communicator) {
     this.presenter = presenter;
     this.processor = processor;
     this.communicator = communicator;

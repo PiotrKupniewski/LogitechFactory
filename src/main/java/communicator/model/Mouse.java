@@ -1,4 +1,4 @@
-package device.model;
+package communicator.model;
 
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;

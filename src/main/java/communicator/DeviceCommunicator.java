@@ -1,6 +1,6 @@
-package device;
+package communicator;
 
-import device.model.Mouse;
+import communicator.model.Mouse;
 
 public interface DeviceCommunicator {
   void sendChangeColorAction(Mouse mouse);

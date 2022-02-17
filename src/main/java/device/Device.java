@@ -1,2 +1,3 @@
-package device;public class Device {
-}
+package device;
+
+public class Device {}
