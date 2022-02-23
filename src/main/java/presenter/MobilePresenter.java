@@ -3,6 +3,6 @@ package presenter;
 public class MobilePresenter implements ApplicationPresenter {
     @Override
     public Integer swapColorNameWithId(String newColor) {
-        return null;
+        return newColor.equalsIgnoreCase("red") ? 1 : 2;
     }
 }
