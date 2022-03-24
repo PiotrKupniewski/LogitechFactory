@@ -1,26 +1,27 @@
-import communicator.DeviceCommunicator;
-import device.DeviceProcessor;
-import presenter.ApplicationPresenter;
+import color.ColorTranslator;
 
 public class LogitechApplication {
 
-  ApplicationPresenter presenter;
-  DeviceProcessor processor;
-  DeviceCommunicator communicator;
+  ColorTranslator colorTranslator;
+  Devices devices;
 
-  public LogitechApplication(
-      ApplicationPresenter presenter, DeviceProcessor processor, DeviceCommunicator communicator) {
-    this.presenter = presenter;
-    this.processor = processor;
-    this.communicator = communicator;
+  public LogitechApplication(ColorTranslator colorTranslator, Devices devices) {
+    this.colorTranslator = colorTranslator;
+    this.devices = devices;
   }
 
-  public Integer swapColorNameWithId(String requestedColor) {
-    return presenter.swapColorNameWithId(requestedColor);
+  // ta tra powinna być poprawiona, long powinien przychodzic bezpośrednio z presentera
+  // presenter jest endpoint'em
+  public void processColorChange(Long deviceID, String externalColor) {
+    var color = colorTranslator.fromString(externalColor);
+    devices.changeColor(deviceID, color);
   }
 
-  public void processColorChange(Integer newColorId) {
-    var mouse = processor.changeColor(newColorId);
-    communicator.sendChangeColorAction(mouse);
+  public void mouseSensitive(long mouseId, double dpi) {
+    devices.mouseSensitive(mouseId, dpi);
+  }
+
+  public void volumeUp(long id, int newVolume) {
+    devices.volumeUp(id, newVolume);
   }
 }
