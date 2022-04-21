@@ -1,8 +1,8 @@
 package device;
 
-import device.drivers.LedDriver;
-import device.drivers.SensitiveDriver;
-import device.drivers.VolumeDriver;
+import device.drivers.led.LedDriver;
+import device.drivers.sensitive.SensitiveDriver;
+import device.drivers.sound.VolumeDriver;
 
 import java.util.Map;
 

@@ -1,6 +1,6 @@
 package device.drivers;
 
-import device.drivers.VolumeDriver;
+import device.drivers.sound.VolumeDriver;
 
 public class LogitechHeadSet3 implements VolumeDriver {
   @Override

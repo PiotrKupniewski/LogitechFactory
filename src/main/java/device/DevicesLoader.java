@@ -1,13 +1,14 @@
 package device;
 
+import device.Devices;
 import device.drivers.KeyboardMax;
-import device.drivers.LedDriver;
+import device.drivers.led.LedDriver;
 import device.drivers.LogitechHeadSet3;
 import device.drivers.MouseL4GDriver;
 import device.drivers.MouseMX3Driver;
-import device.drivers.SensitiveDriver;
+import device.drivers.sensitive.SensitiveDriver;
 import device.drivers.TvMax;
-import device.drivers.VolumeDriver;
+import device.drivers.sound.VolumeDriver;
 
 import java.util.Map;
 

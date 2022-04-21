@@ -1,8 +1,8 @@
 package device.drivers;
 
-import device.drivers.LedDriver;
-import device.drivers.SensitiveDriver;
-import device.drivers.VolumeDriver;
+import device.drivers.led.LedDriver;
+import device.drivers.sensitive.SensitiveDriver;
+import device.drivers.sound.VolumeDriver;
 
 public class TvMax implements VolumeDriver, LedDriver, SensitiveDriver {
   @Override

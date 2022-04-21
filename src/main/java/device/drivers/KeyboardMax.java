@@ -1,6 +1,6 @@
 package device.drivers;
 
-import device.drivers.LedDriver;
+import device.drivers.led.LedDriver;
 
 public class KeyboardMax implements LedDriver {
   @Override

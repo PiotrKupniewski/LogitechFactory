@@ -1,7 +1,7 @@
 package device.drivers;
 
-import device.drivers.LedDriver;
-import device.drivers.SensitiveDriver;
+import device.drivers.led.LedDriver;
+import device.drivers.sensitive.SensitiveDriver;
 
 public class MouseMX3Driver implements LedDriver, SensitiveDriver {
 

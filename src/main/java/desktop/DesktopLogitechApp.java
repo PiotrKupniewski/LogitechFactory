@@ -2,8 +2,7 @@ package desktop;
 
 import device.Devices;
 import device.DevicesLoader;
-
-public class DesktopLogitechApp{
+ class DesktopLogitechApp{
 
   DesktopColorTranslator colorTranslator;
   Devices devices;

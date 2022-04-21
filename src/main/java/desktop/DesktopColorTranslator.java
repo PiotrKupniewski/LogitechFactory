@@ -1,8 +1,7 @@
 package desktop;
 
-public class DesktopColorTranslator {
-  public Integer fromString(String newColor) {
-    int colorNumber = newColor.equalsIgnoreCase("red") ? 1 : 0;
-    return colorNumber;
+class DesktopColorTranslator {
+  Integer fromString(String newColor) {
+    return newColor.equalsIgnoreCase("red") ? 1 : 0;
   }
 }
