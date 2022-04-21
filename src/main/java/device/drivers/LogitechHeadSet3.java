@@ -1,6 +1,8 @@
-package device;
+package device.drivers;
 
-public class LogitechHeadSet3 implements HeadsetDriver {
+import device.drivers.VolumeDriver;
+
+public class LogitechHeadSet3 implements VolumeDriver {
   @Override
   public void volumeUp(long id, int newVolume) {
     System.out.println("volume up LogitechHeadSet3");

@@ -1,6 +1,10 @@
-package device;
+package device.drivers;
 
-public class TvMax implements HeadsetDriver, LedDriver, MouseSensitiveDriver {
+import device.drivers.LedDriver;
+import device.drivers.SensitiveDriver;
+import device.drivers.VolumeDriver;
+
+public class TvMax implements VolumeDriver, LedDriver, SensitiveDriver {
   @Override
   public void volumeUp(long id, int newVolume) {
     System.out.println("TV volume up");

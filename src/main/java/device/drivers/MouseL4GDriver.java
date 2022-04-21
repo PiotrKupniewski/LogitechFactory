@@ -1,6 +1,9 @@
-package device;
+package device.drivers;
 
-public class MouseL4GDriver implements LedDriver, MouseSensitiveDriver {
+import device.drivers.LedDriver;
+import device.drivers.SensitiveDriver;
+
+public class MouseL4GDriver implements LedDriver, SensitiveDriver {
   @Override
   public void changeColor(Integer color) {
     String changedColor = "";

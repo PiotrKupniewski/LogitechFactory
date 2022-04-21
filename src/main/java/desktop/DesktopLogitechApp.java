@@ -1,17 +1,18 @@
-import color.ColorTranslator;
+package desktop;
 
-public class LogitechApplication {
+import device.Devices;
+import device.DevicesLoader;
 
-  ColorTranslator colorTranslator;
+public class DesktopLogitechApp{
+
+  DesktopColorTranslator colorTranslator;
   Devices devices;
 
-  public LogitechApplication(ColorTranslator colorTranslator, Devices devices) {
-    this.colorTranslator = colorTranslator;
-    this.devices = devices;
+  DesktopLogitechApp() {
+    this.colorTranslator = new DesktopColorTranslator();
+    this.devices = new DevicesLoader().load();
   }
 
-  // ta tra powinna być poprawiona, long powinien przychodzic bezpośrednio z presentera
-  // presenter jest endpoint'em
   public void processColorChange(Long deviceID, String externalColor) {
     var color = colorTranslator.fromString(externalColor);
     devices.changeColor(deviceID, color);
@@ -23,5 +24,9 @@ public class LogitechApplication {
 
   public void volumeUp(long id, int newVolume) {
     devices.volumeUp(id, newVolume);
+  }
+
+  public void updateDrivers(long id) {
+    devices.updateDriver(id);
   }
 }

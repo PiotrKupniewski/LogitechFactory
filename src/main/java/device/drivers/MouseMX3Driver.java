@@ -1,6 +1,9 @@
-package device;
+package device.drivers;
 
-public class MouseMX3Driver implements LedDriver, MouseSensitiveDriver{
+import device.drivers.LedDriver;
+import device.drivers.SensitiveDriver;
+
+public class MouseMX3Driver implements LedDriver, SensitiveDriver {
 
   @Override
   public void changeColor(Integer newColor) {
